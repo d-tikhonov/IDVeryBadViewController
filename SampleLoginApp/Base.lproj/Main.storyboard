@@ -105,7 +105,6 @@
                         <outlet property="loginButton" destination="JD3-uq-2Gx" id="wEP-RU-cfc"/>
                         <outlet property="passwordTextField" destination="cuA-HK-dvV" id="CeE-e5-DCF"/>
                         <outlet property="titleLabel" destination="J9V-cB-MVx" id="bBK-We-ASE"/>
-                        <segue destination="ZGu-FQ-yu1" kind="show" id="hT9-MY-Bwl"/>
                         <segue destination="qlg-Om-Wca" kind="showDetail" identifier="OpenProfileFromLogin" id="klx-43-Rmo"/>
                     </connections>
                 </viewController>
@@ -305,7 +304,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="klx-43-Rmo"/>
-        <segue reference="hT9-MY-Bwl"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.31671074030000002" blue="0.37776783110000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

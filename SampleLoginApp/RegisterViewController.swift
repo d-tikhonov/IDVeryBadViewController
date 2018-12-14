@@ -23,53 +23,40 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func register() {
-        let todoEndpoint: String = "https://reqres.in/api/register"
-        guard let url = URL(string: todoEndpoint) else {
-            print("Error: cannot create URL")
-            return
-        }
-        var todosUrlRequest = URLRequest(url: url)
-        todosUrlRequest.httpMethod = "POST"
-        let newTodo: [String: Any] = ["email": self.emailTextField.text!, "password": self.passwordTextField.text!]
-        let jsonTodo: Data
-        do {
-            jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
-            todosUrlRequest.httpBody = jsonTodo
-        } catch {
-            print("Error: cannot create JSON from todo")
-            return
-        }
+        let apiObject = APIObject(url: APIURL.register,
+                                  method: .post,
+                                  parameters: ["email": self.emailTextField.text!, "password": self.passwordTextField.text!])
         
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        
-        let task = session.dataTask(with: todosUrlRequest) { [weak self]
-            (data, response, error) in
-            guard error == nil else {
-                self?.errorLabel.isHidden = false
-                self?.errorLabel.text = error?.localizedDescription
-                print(error!)
-                return
-            }
-            guard let responseData = data else {
-                print("Error: did not receive data")
+        NetWorker.shared.requestWithAPIObject(apiObject) { [weak self] (data, error) in
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    self?.errorLabel.isHidden = false
+                    self?.errorLabel.text = "Что то пошло не так"
+                }
                 return
             }
             do {
-                guard let _ = try JSONSerialization.jsonObject(with: responseData, options: [])
-                    as? [String: Any] else {
+                guard (try JSONSerialization.jsonObject(with: data, options: [])
+                    as? [String: Any]) != nil else {
                         print("error trying to convert data to JSON")
+                        DispatchQueue.main.async {
+                            self?.errorLabel.isHidden = false
+                            self?.errorLabel.text = "Что то пошло не так"
+                        }
                         return
                 }
                 DispatchQueue.main.async {
-                    self?.performSegue(withIdentifier: "OpenProfileFromRegistration", sender: nil)
+                    self?.performSegue(withIdentifier: "OpenProfileFromLogin", sender: nil)
                 }
             } catch  {
                 print("error trying to convert data to JSON")
+                DispatchQueue.main.async {
+                    self?.errorLabel.isHidden = false
+                    self?.errorLabel.text = "Что то пошло не так"
+                }
                 return
             }
         }
-        task.resume()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

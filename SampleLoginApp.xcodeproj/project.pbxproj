@@ -14,6 +14,9 @@
 		CE316F9D21B6780600D27A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE316F9B21B6780600D27A38 /* LaunchScreen.storyboard */; };
 		CE316FA521B6783700D27A38 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316FA421B6783700D27A38 /* RegisterViewController.swift */; };
 		CE316FBF21B69AB500D27A38 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */; };
+		CEFB90CB21C34F7C0057F42B /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CA21C34F7C0057F42B /* NetWorker.swift */; };
+		CEFB90CD21C34FAE0057F42B /* APIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CC21C34FAE0057F42B /* APIURL.swift */; };
+		CEFB90CF21C35E120057F42B /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		CE316F9E21B6780600D27A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE316FA421B6783700D27A38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CEFB90CA21C34F7C0057F42B /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
+		CEFB90CC21C34FAE0057F42B /* APIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURL.swift; sourceTree = "<group>"; };
+		CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				CE316F9E21B6780600D27A38 /* Info.plist */,
 				CE316FA421B6783700D27A38 /* RegisterViewController.swift */,
 				CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */,
+				CEFB90CA21C34F7C0057F42B /* NetWorker.swift */,
+				CEFB90CC21C34FAE0057F42B /* APIURL.swift */,
+				CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */,
 			);
 			path = SampleLoginApp;
 			sourceTree = "<group>";
@@ -143,7 +152,10 @@
 			files = (
 				CE316FA521B6783700D27A38 /* RegisterViewController.swift in Sources */,
 				CE316F9521B6780400D27A38 /* LoginViewController.swift in Sources */,
+				CEFB90CB21C34F7C0057F42B /* NetWorker.swift in Sources */,
 				CE316FBF21B69AB500D27A38 /* ProfileViewController.swift in Sources */,
+				CEFB90CF21C35E120057F42B /* UIImageView+Utils.swift in Sources */,
+				CEFB90CD21C34FAE0057F42B /* APIURL.swift in Sources */,
 				CE316F9321B6780400D27A38 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
