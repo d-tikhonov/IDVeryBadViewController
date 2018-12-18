@@ -14,6 +14,10 @@
 		CE316F9D21B6780600D27A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE316F9B21B6780600D27A38 /* LaunchScreen.storyboard */; };
 		CE316FA521B6783700D27A38 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316FA421B6783700D27A38 /* RegisterViewController.swift */; };
 		CE316FBF21B69AB500D27A38 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */; };
+		CE3BC02621C7327700389374 /* RegisterDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC02521C7327700389374 /* RegisterDataProvider.swift */; };
+		CE3BC02821C735CB00389374 /* LoginDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC02721C735CB00389374 /* LoginDataProvider.swift */; };
+		CE3BC02A21C7373C00389374 /* ProfileDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC02921C7373C00389374 /* ProfileDataProvider.swift */; };
+		CE3BC02C21C738AC00389374 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3BC02B21C738AC00389374 /* User.swift */; };
 		CEFB90CB21C34F7C0057F42B /* NetWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CA21C34F7C0057F42B /* NetWorker.swift */; };
 		CEFB90CD21C34FAE0057F42B /* APIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CC21C34FAE0057F42B /* APIURL.swift */; };
 		CEFB90CF21C35E120057F42B /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */; };
@@ -29,6 +33,10 @@
 		CE316F9E21B6780600D27A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE316FA421B6783700D27A38 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CE3BC02521C7327700389374 /* RegisterDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterDataProvider.swift; sourceTree = "<group>"; };
+		CE3BC02721C735CB00389374 /* LoginDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataProvider.swift; sourceTree = "<group>"; };
+		CE3BC02921C7373C00389374 /* ProfileDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataProvider.swift; sourceTree = "<group>"; };
+		CE3BC02B21C738AC00389374 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CEFB90CA21C34F7C0057F42B /* NetWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorker.swift; sourceTree = "<group>"; };
 		CEFB90CC21C34FAE0057F42B /* APIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURL.swift; sourceTree = "<group>"; };
 		CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
@@ -64,19 +72,87 @@
 		CE316F9121B6780400D27A38 /* SampleLoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				CE316F9221B6780400D27A38 /* AppDelegate.swift */,
-				CE316F9421B6780400D27A38 /* LoginViewController.swift */,
-				CE316F9621B6780400D27A38 /* Main.storyboard */,
-				CE316F9921B6780600D27A38 /* Assets.xcassets */,
-				CE316F9B21B6780600D27A38 /* LaunchScreen.storyboard */,
-				CE316F9E21B6780600D27A38 /* Info.plist */,
-				CE316FA421B6783700D27A38 /* RegisterViewController.swift */,
+				CE3BC03421C7442F00389374 /* ViewControllers */,
+				CE3BC03121C743F500389374 /* Design */,
+				CE3BC03221C7440B00389374 /* Common */,
+				CE3BC03021C73A8D00389374 /* Utils */,
+				CE3BC03321C7441300389374 /* Models */,
+			);
+			path = SampleLoginApp;
+			sourceTree = "<group>";
+		};
+		CE3BC02D21C73A5F00389374 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
 				CE316FBE21B69AB500D27A38 /* ProfileViewController.swift */,
+				CE3BC02921C7373C00389374 /* ProfileDataProvider.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CE3BC02E21C73A6A00389374 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				CE316FA421B6783700D27A38 /* RegisterViewController.swift */,
+				CE3BC02521C7327700389374 /* RegisterDataProvider.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		CE3BC02F21C73A7500389374 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE316F9421B6780400D27A38 /* LoginViewController.swift */,
+				CE3BC02721C735CB00389374 /* LoginDataProvider.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE3BC03021C73A8D00389374 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
 				CEFB90CA21C34F7C0057F42B /* NetWorker.swift */,
 				CEFB90CC21C34FAE0057F42B /* APIURL.swift */,
 				CEFB90CE21C35E120057F42B /* UIImageView+Utils.swift */,
 			);
-			path = SampleLoginApp;
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE3BC03121C743F500389374 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				CE316F9621B6780400D27A38 /* Main.storyboard */,
+				CE316F9921B6780600D27A38 /* Assets.xcassets */,
+				CE316F9B21B6780600D27A38 /* LaunchScreen.storyboard */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		CE3BC03221C7440B00389374 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE316F9E21B6780600D27A38 /* Info.plist */,
+				CE316F9221B6780400D27A38 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE3BC03321C7441300389374 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE3BC02B21C738AC00389374 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE3BC03421C7442F00389374 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE3BC02F21C73A7500389374 /* Login */,
+				CE3BC02E21C73A6A00389374 /* Register */,
+				CE3BC02D21C73A5F00389374 /* Profile */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,10 +229,14 @@
 				CE316FA521B6783700D27A38 /* RegisterViewController.swift in Sources */,
 				CE316F9521B6780400D27A38 /* LoginViewController.swift in Sources */,
 				CEFB90CB21C34F7C0057F42B /* NetWorker.swift in Sources */,
+				CE3BC02821C735CB00389374 /* LoginDataProvider.swift in Sources */,
 				CE316FBF21B69AB500D27A38 /* ProfileViewController.swift in Sources */,
 				CEFB90CF21C35E120057F42B /* UIImageView+Utils.swift in Sources */,
 				CEFB90CD21C34FAE0057F42B /* APIURL.swift in Sources */,
 				CE316F9321B6780400D27A38 /* AppDelegate.swift in Sources */,
+				CE3BC02A21C7373C00389374 /* ProfileDataProvider.swift in Sources */,
+				CE3BC02621C7327700389374 /* RegisterDataProvider.swift in Sources */,
+				CE3BC02C21C738AC00389374 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TL6WTH74Y6;
-				INFOPLIST_FILE = SampleLoginApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleLoginApp/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TL6WTH74Y6;
-				INFOPLIST_FILE = SampleLoginApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SampleLoginApp/Common/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
